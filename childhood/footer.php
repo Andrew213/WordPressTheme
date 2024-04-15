@@ -36,7 +36,7 @@
 
 
                             <?php
-                            $inst = get_field('inst_link');
+                            $inst = get_field('inst_link', 2);
 
                             if (!empty($inst)): ?>
 
@@ -56,7 +56,7 @@
 
 
 <?php
-$fb = get_field('fb_link');
+$fb = get_field('fb_link', 2);
 
 if (!empty($fb)): ?>
 
@@ -74,7 +74,7 @@ if (!empty($fb)): ?>
                         
 
                             <?php
-                            $yt = get_field('youtube_link');
+                            $yt = get_field('youtube_link', 2);
 
                             if (!empty($yt)): ?>
 
@@ -99,10 +99,12 @@ if (!empty($fb)): ?>
                                 ); ?>/assets/img/icons/svg/phone.svg" alt="телефон" class="footer__contacts-logo">
                                 <div class="footer__contacts-tel">
                                 <a href="tel:<?php the_field(
-                                    'tel_1'
-                                ); ?>"><?php the_field('tel_1'); ?></a>
-                  <a href="tel:<?php the_field('tel_2'); ?>"><?php the_field(
-    'tel_2'
+                                    'tel_1',
+                                    2
+                                ); ?>"><?php the_field('tel_1', 2); ?></a>
+                  <a href="tel:<?php the_field('tel_2', 2); ?>"><?php the_field(
+    'tel_2',
+    2
 ); ?></a>
                                 </div>
                             </div>
@@ -112,7 +114,7 @@ if (!empty($fb)): ?>
                                 ); ?>/assets/img/icons/svg/pointer.svg" alt="указатель" class="footer__contacts-logo">
                                 <address>
                                     
-                                <?php the_field('addres'); ?>
+                                <?php the_field('addres', 2); ?>
                                 
                                 
                                 </address>
