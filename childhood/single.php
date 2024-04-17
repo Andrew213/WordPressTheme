@@ -21,6 +21,7 @@
                     'orderby' => 'date',
                     'order' => 'ASC',
                     'post_type' => 'post',
+                    'post__not_in' => [get_the_ID()],
                     'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
                 ]);
 
